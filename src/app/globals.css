@@ -1,1 +1,82 @@
 @import "tailwindcss";
+
+@theme {
+	--color-primary: #123d8c;
+	--color-secondary: #c9a227;
+	--color-accent: #d32f2f;
+	--color-background-light: #f8f9fb;
+	--color-background-dark: #111721;
+	--color-surface-light: #ffffff;
+	--color-surface-dark: #1e293b;
+	--color-text-main: #0e131b;
+	--color-text-muted: #4f6896;
+	--color-border-light: #e8ebf3;
+
+	--color-meo-blue: #123d8d;
+	--color-meo-red: #d62828;
+	--color-meo-gold: #c9a227;
+	--color-neutral-border: #e2e8f0;
+	--color-neutral-text-main: #1e293b;
+	--color-neutral-text-sub: #64748b;
+
+	--font-sans: "IBM Plex Sans", "Inter", sans-serif;
+	--font-display: "Inter", sans-serif;
+
+	--shadow-card: 0 4px 6px -1px rgba(18, 61, 141, 0.1), 0 2px 4px -1px rgba(18, 61, 141, 0.06);
+
+	--color-admin-primary: #ec1313;
+	--color-admin-primary-dark: #b90e0e;
+	--color-admin-bg-light: #f8f6f6;
+	--color-admin-bg-dark: #1a0f0f;
+	--color-admin-surface-light: #ffffff;
+	--color-admin-surface-dark: #2a1515;
+	--color-admin-text-main: #1b0d0d;
+	--color-admin-text-muted: #9a4c4c;
+	--color-status-verified: #d4af37;
+	--color-status-pending: #1d4ed8;
+	--color-status-flagged: #dc2626;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #cbd5e1;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #94a3b8;
+}
+
+@keyframes fade-in-up {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-fade-in-up {
+	animation: fade-in-up 0.45s ease-out both;
+}
+
+.form-input-meo {
+	@apply block w-full rounded border border-gray-300 bg-white px-4 py-3 text-sm text-neutral-text-main shadow-sm transition-colors duration-200 focus:border-meo-blue focus:ring-1 focus:ring-meo-blue dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder-slate-400;
+}
+
+.form-label-meo {
+	@apply mb-1.5 block text-xs font-bold tracking-wider text-neutral-text-sub uppercase dark:text-slate-300;
+}
